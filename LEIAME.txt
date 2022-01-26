@@ -1,0 +1,30 @@
+João Victor Miranda Vieira
+
+*Considerações: 
+
+Na busca sequencial, o desempenho é diretamente proporcional ao tamanho do vetor.
+Como guardamos os valores utilizando uma função hash, muitas vagas do estacionamento estão vazias, não ordenadas.
+Ter o trabalho de percorrer elemento a elemento para achar um veículo fica custoso, ainda que não seja
+uma diferença muito visível num exemplo de vetor tamanho 200.
+
+A busca binária é eficiente por sempre diminuir a lista na metade para a busca, verificando se o elemento
+deve estar à direita ou à esquerda do elemento do meio da lista. Para isso, é necessario que o vetor esteja
+em ordem. Lidando com veículos, não há um parâmetro que seja interessante para definir a forma de ordenação.
+O que torna inviável tanto a busca binária quanto a busca sequencial ordenada.
+
+Considerando isso, a busca com hashing é a mais adequada, acessa diretamente a posição correspondente ao valor
+retornado da hashfunction utilizada. Apesar das possiveis colisões, a busca ainda é eficiente.
+
+Um fator também interessante no uso do hashing, é a forma como as vagas são preenchidas.
+Os veículos ficam 'espalhados', deixando algumas vagas livres entre eles.
+Se fosse necessário para o estacionamento guardar os veiculos sequencialmente, ou seja:
+vaga 1 preenchida, próximo veículo que chegar deve ocupar a vaga 2.
+Ou seja, todo novo veículo deve ocupar a vaga livre mais próxima. (da esquerda para direita. 0-199)
+Não consegui pensar em uma forma de fazer isso utilizando hash.
+
+
+*Materiais consultados: 
+https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/st-hash.html
+https://www.academia.edu/44202511/Uma_introdu%C3%A7%C3%A3o_ao_estudo_de_bitcoins_e_blockchains #leitura de uma parte sobre hash. página 36.
+https://panda.ime.usp.br/pythonds/static/pythonds_pt/05-OrdenacaoBusca/Hashing.html
+https://www.4devs.com.br/gerador_de_veiculos #algumas ideias de placas/veiculos 
