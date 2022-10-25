@@ -4,13 +4,13 @@ class HashTable:
         self._slots = [None] * self._tamanho
         self._valores = [None] * self._tamanho
     
-    def hashfunction(self, chave, tamanho): 
+    def hashfunction(self, chave, tamanho): #alterada para calcular hash da placa(string)
         sum = 0 
         for pos in range(len(chave)):
             sum = sum+ord(chave[pos])*(pos+1)
         return sum%tamanho
     
-    def rehash(self, oldhash, tamanho): #trata colisões de objetos com mesmo hash
+    def rehash(self, oldhash, tamanho):
         return (oldhash+1)%tamanho
 
     def put(self, chave, valor):

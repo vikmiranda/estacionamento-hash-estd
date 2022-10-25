@@ -5,10 +5,10 @@ João Victor Miranda Vieira
 Na busca sequencial, o desempenho é diretamente proporcional ao tamanho do vetor.
 Como guardamos os valores utilizando uma função hash, muitas vagas do estacionamento estão vazias, não ordenadas.
 Ter o trabalho de percorrer elemento a elemento para achar um veículo fica custoso, ainda que não seja
-uma diferença muito visível num exemplo de vetor tamanho 200.
+uma diferença muito visivel num exemplo de vetor tamanho 200.
 
 A busca binária é eficiente por sempre diminuir a lista na metade para a busca, verificando se o elemento
-deve estar à direita ou à esquerda do elemento do meio da lista. Para isso, é necessario que o vetor esteja
+deve estar á direita ou à esquerda do elemento do meio da lista. Para isso é necessario que o vetor esteja
 em ordem. Lidando com veículos, não há um parâmetro que seja interessante para definir a forma de ordenação.
 O que torna inviável tanto a busca binária quanto a busca sequencial ordenada.
 
